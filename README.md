@@ -10,8 +10,8 @@ What makes this project unique is its AI-based text matching system, which autom
 
 ## 🎯 Objective
 
-In many colleges, lost and found items are handled informally through notice boards or word of mouth, which makes recovery difficult and time-consuming.
-This project solves that problem by.....
+In many colleges, lost and found items are handled informally through notice boards or word of mouth, which makes recovery difficult and time consuming.
+This project solves that problem by.
 1. Creating a centralized platform
 2. Reducing manual searching
 3. Using AI to suggest possible matches automatically
