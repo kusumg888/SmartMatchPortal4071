@@ -23,7 +23,7 @@ This project solves that problem by.
 
 ### 👤 User Management
 - User Registration and Login
-- 
+ 
 ### 📦 Lost & Found Post Management
 - Post Lost Items
 - Post Found Items
