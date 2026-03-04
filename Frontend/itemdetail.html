@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Details - Smart Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">HOME</a>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">LOGIN</a>
+            <a href="register.html">REGISTER</a>
+        </div>
+    </nav>
+
+    <!-- ===== ITEM DETAILS SECTION ===== -->
+    <div class="details-wrapper">
+
+        <h1 class="main-title">Item Details</h1>
+        <hr class="title-underline">
+
+        <div class="details-card">
+
+            <!-- INFORMATION COLUMN -->
+            <div class="info-column">
+
+                <div class="detail-row">
+                    <span class="label">Item Name:</span>
+                    <span class="value" id="disp-item-name">Wallet example</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Category:</span>
+                    <div class="category-box">
+                        <span class="value" id="disp-category">Wallet</span>
+                        <small class="sub-label">(Mobile, Bag, ID Card, etc)</small>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Description:</span>
+                    <div class="description-box" id="disp-description"></div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Location:</span>
+                    <span class="value border-bottom" id="disp-location">Campus</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Date:</span>
+                    <span class="value border-bottom" id="disp-date">2026-03-04</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Status:</span>
+                    <span class="value status-text" id="disp-status">Active</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Type:</span>
+                    <span class="value border-bottom" id="disp-type">Found</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Posted By:</span>
+                    <span class="value border-bottom" id="disp-username">username</span>
+                </div>
+
+            </div>
+
+            <!-- IMAGE COLUMN -->
+
+            
+            <div class="image-column">
+                <div class="image-display-box">
+    <span id="noImageText" class="img-placeholder-text">Image not available</span>
+    <img src="" id="item-image" style="display:none;">
+</div>
+            </div>
+
+        </div>
+
+        <!-- MATCH & ACTION SECTION -->
+        <div class="bottom-actions">
+
+            <div class="ai-matches">
+                <span class="label">Suggested AI matches:</span>
+                <button class="match-btn">Lost Black Wallet (1)</button>
+                <button class="match-btn">Brown Leather Wallet (2)</button>
+            </div>
+
+            <div class="action-buttons">
+                <button class="contact-btn">Contact Owner</button>
+                <button class="resolve-btn">
+                    Mark as Resolved<br>
+                    <small>(owner only)</small>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
