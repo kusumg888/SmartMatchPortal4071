@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Lost & Found Portal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+      <nav class="navbar">
+
+    <div class="nav-left">
+        <a href="index.html">HOME</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="login.html">LOGIN</a>
+        <a href="register.html">REGISTER</a>
+    </div>
+
+      </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header class="hero">
+
+        <div class="hero-left">
+            <h1>Smart Lost & Found <br>Portal</h1>
+            <p>Helping students recover their lost items quickly.</p>
+        </div>
+
+        <div class="hero-right">
+
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text" placeholder="Search lost & Found Items">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- Buttons -->
+            <a href="postlostitem.html">
+        <button class="btn">Report Lost Item</button>
+    </a>
+    
+    <a href="postfounditem.html">
+        <button class="btn">Report Found Item</button>
+    </a>
+
+        </div>
+
+    </header>
+
+    <!-- ===== MAIN SECTION ===== -->
+    <main class="content-wrapper">
+
+    <div class="section-label">Recent Items</div>
+
+    <div class="items-container">
+        <p>No items posted yet</p><br>
+        <p>Be the first to report one!</p>
+    </div>
+
+      <!-- </main> -->
+
+        <!-- ABOUT -->
+        <section class="about-section">
+            <h2>About This Portal</h2>
+            <p>
+                This platform allows students to report lost or found items on campus.
+                Our smart matching system suggests possible matches between lost and
+                found posts, making item recovery easier and faster.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+          
+        <p>© 2026 SmartMatch Lost & Found Portal</p>
+        <p>Contact: support@college.edu</p>
+    </footer>
+
+</body>
+</html> THIS IS MY home page code and css of this code is 
+
+
+
+
+LOST page
+
+<div class="form-card">
+    <h1 class="page-title">Post Lost Item</h1>
+    
+    <form id="postLostForm">
+        <div class="input-row">
+            <label>Item Name:</label>
+            <input type="text" placeholder="e.g. Blue Wallet" required>
+        </div>
+
+        <div class="input-row">
+            <label>Category:</label>
+            <input type="text" placeholder="Mobile, Bag, ID Card, etc.">
+        </div>
+
+        <div class="input-row">
+            <label>Description:</label>
+            <textarea rows="3" placeholder="Describe the item..."></textarea>
+        </div>
+
+        <div class="input-row">
+            <label>Lost Location:</label>
+            <input type="text" placeholder="e.g. Library, Cafe">
+        </div>
+
+        <div class="input-row">
+            <label>Date Lost:</label>
+            <input type="date">
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Report</button>
+    </form>
+</div>
+
+
+
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+/* .footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(209, 154, 106, 0.4);
+    color: #000000;
+} */
+
+
+
+
+/* =========================================
+   1. GLOBAL & BODY (60% Opacity Background)
+   ========================================= */
+/* body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f7e6d4; 
+    min-height: 100vh;
+    color: #2d2d2d;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('your-background.jpg'); /* Ensure image is in your folder */
+    /* background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+/* } */
+
+/* =========================================
+   3. RECENT ITEMS SECTION
+   ========================================= */ 
+/* .content-wrapper { 
+    text-align: center; 
+    padding: 40px 20px; 
+}
+
+.section-label {
+    background: #d19a6a;
+    color: #ffffff;
+    padding: 15px 60px;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.items-container {
+    background: linear-gradient(#d19a6a, #c08453);
+    width: 80%;
+    max-width: 900px;
+    height: 300px;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+} */
+
+/* =========================================
+   4. SHARED FORMS (Login, Register, Post)
+   ========================================= */
+/* .form-card {
+    background-color: #d19a6a;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    color: #ffffff;
+}
+
+h1.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.input-row label {
+    flex: 1;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.input-row input, 
+.input-row textarea {
+    flex: 2;
+    background: #f5e8de;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #c07336;
+    color: #ffffff;
+    border: none;
+    padding: 12px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* margin: 20px 0; */
+/* } */ */
