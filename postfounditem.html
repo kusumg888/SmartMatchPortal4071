@@ -25,13 +25,39 @@
     Found an Item?
 </h2>
 <div class="form-card">
-    <form>
-        <div class="input-row"><label>Item Name:</label><input type="text"></div>
-        <div class="input-row"><label>Category:</label><input type="text" placeholder="(Mobile, Bag, ID Card, etc)"></div>
-        <div class="input-row"><label>Description:</label><textarea rows="2"></textarea></div>
-        <div class="input-row"><label>Location:</label><input type="text"></div>
-        <div class="input-row"><label>Date:</label><input type="date"></div>
-        <div class="input-row"><label>Upload Image:</label><input type="file" style="background:white; border-radius:5px;"></div>
-        <button class="btn-submit">Submit</button>
-    </form>
+   <form action="http://localhost:5000/found-item" method="POST" enctype="multipart/form-data">
+
+<div class="input-row">
+<label>Item Name:</label>
+<input type="text" name="itemname" required>
+</div>
+
+<div class="input-row">
+<label>Category:</label>
+<input type="text" name="category" placeholder="(Mobile, Bag, ID Card, etc)" required>
+</div>
+
+<div class="input-row">
+<label>Description:</label>
+<textarea name="description" rows="2"></textarea>
+</div>
+
+<div class="input-row">
+<label>Location:</label>
+<input type="text" name="location" required>
+</div>
+
+<div class="input-row">
+<label>Date:</label>
+<input type="date" name="founddate" required>
+</div>
+
+<div class="input-row">
+<label>Upload Image:</label>
+<input type="file" name="image" style="background:white; border-radius:5px;">
+</div>
+
+<button type="submit" class="btn-submit">Submit</button>
+
+</form>
 </div>
