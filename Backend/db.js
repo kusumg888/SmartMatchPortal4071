@@ -8,7 +8,7 @@ const db = mysql.createConnection(
         database : "smartmatch_lost_found_portal"
     }
 );
-
+  
 db.connect((err)=> 
 {
     if(err)
