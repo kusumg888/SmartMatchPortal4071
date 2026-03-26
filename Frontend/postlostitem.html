@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+      <nav class="navbar">
+
+    <div class="nav-left">
+        <a href="index.html">HOME</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="login.html">LOGIN</a>
+        <a href="register.html">REGISTER</a>
+    </div>
+
+      </nav>
+      
+<h2 style="text-align:center; font-size: 3rem; margin-top:30px; margin-bottom:-10px; line-height:1;">
+    Report a Lost Item
+</h2>
+<div class="form-card">
+<form id="lostForm" enctype="multipart/form-data">
+
+
+<div class="input-row">
+<label>Item Name:</label>
+<input type="text" name="itemname" required>
+</div>
+
+<div class="input-row">
+<label>Category:</label>
+<input type="text" name="category" placeholder="(Mobile, Bag, ID Card, etc)" required>
+</div>
+
+<div class="input-row">
+<label>Description:</label>
+<textarea name="description" rows="2"></textarea>
+</div>
+
+<div class="input-row">
+<label>Location:</label>
+<input type="text" name="location">
+</div>
+
+<div class="input-row">
+<label>Date:</label>
+<input type="date" name="lostdate" required>
+</div>
+
+<div class="input-row">
+<label>Upload Image:</label>
+<input type="file" name="image" style="background:rgb(255, 255, 255); border-radius:5px;">
+</div>
+
+<button type="submit" class="btn-submit">Submit</button>
+
+</form>
+</div>
+
+<script src="script.js"></script>
+
+<!-- Alert Boxes -->
+<div class="overlay" id="customAlert">
+  <div class="alert-box">
+    <div class="header">Smart Lost & Found Portal</div>
+    <div class="message" id="alertMessage">Message Here</div>
+    <button class="ok-btn" onclick="closeAlert()">OK</button>
+  </div>
+</div>
