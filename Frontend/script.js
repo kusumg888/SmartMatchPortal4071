@@ -7,9 +7,9 @@ const msg = document.getElementById("alertMessage");
 
 msg.innerText = message;
 overlay.style.display = "flex";
-
+  
 }
-
+ 
 function closeAlert(){
 document.getElementById("customAlert").style.display = "none";
 
