@@ -1,0 +1,629 @@
+/* ===== GLOBAL & BACKGROUND ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Hardcoded background color #f7e6d4 */
+    background: #f7e6d4; 
+    color: #2d2d2d;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Image with 60% Opacity */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    /* Replace 'your-background.jpg' with your actual image file name */
+    background-image: url('background.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #d19a6a;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;  /* This pushes left & right apart */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.navbar a:hover{
+    color: #ffe6cc;
+}
+
+/* Click effect */
+.navbar a:active{
+    color: #5a2f0d;
+    transform: scale(0.9);
+}
+
+/* .navbar a:active{
+    transform: scale(0.9);   /* small press effect */
+    /* opacity: 0.6;
+    
+} */ 
+
+
+/* ===== HERO SECTION ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 8% 60px 45px;
+}
+
+.hero-left {
+    margin-top: 30px;
+
+}
+
+.hero-left h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-left p {
+     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ===== RIGHT SIDE ===== */
+.hero-right {
+    display: flex;
+    margin-top: 4px;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 0px 0px; */
+    align-items: flex-end;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    background: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    align-items: center;
+    width: 100%; 
+    margin-bottom: 10px;
+}
+
+/* WHEN USER TYPES (BEST UX) */
+.search-box:focus-within {
+    box-shadow: 0 0 15px rgba(209,154,106,0.9);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: 300px;
+}
+.search-box i {
+    margin-left: auto;   /* This pushes icon to right */
+    cursor: pointer;
+}
+
+.search-icon {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.search-icon:hover {
+    color: #d19a6a;
+}
+
+/* Click effect */
+.search-icon:active {
+    transform: scale(0.85);
+    color: #5a2f0d;
+}
+
+/* Buttons */
+.btn {
+    background: #d19a6a;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* ===== MAIN SECTION  Recent Items Box ===== */
+.content-wrapper {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.5rem;
+}
+
+/* Recent Items Box */
+.section-label {
+    background: #d19a6a;
+    color: white;
+    padding: 15px 60px;
+    border-radius: 8px;
+    font-size: 1.8rem;   /* increased size */
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+
+.items-container {
+    background: linear-gradient(#d19a6a, #c08453);
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    padding: 30px;
+
+     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.empty-state{
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.empty-state p{
+    margin: 5px 0;
+}
+
+/* .cards-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+.item-card{
+     background: linear-gradient(#d19a6a, #c08453);
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.item-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-card button{
+   margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.9s ease;
+}
+
+.item-card button:hover{
+    background: linear-gradient(45deg,#ffffff,#ffe6cc,#ffffff);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,255,255,0.9);
+}
+
+
+/* ===== SHARED FORM CARDS (Login, Register, Post) ===== */
+.form-card {
+    background-color: #d19a6a;
+    width: 90%;
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+h1.page-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    /* This controls the space BETWEEN the text and the first input field */
+    margin-bottom: 40px; 
+    text-decoration: none;
+    /* This controls the space between the text and the underline itself */
+    text-underline-offset: 12px; 
+    
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-text {
+    /* Space between the submit button and this text */
+    margin-top: 30px; 
+    
+    /* Center the text and links */
+    text-align: center;
+    
+    /* Line height makes the two lines of text easier to read */
+    line-height: 1.8; 
+    
+    /* Standard font size for footers */
+    font-size: 1rem; 
+    
+    /* Hardcoded white color */
+    color: #ffffff; 
+}
+
+.footer-text a {
+    /* Hardcoded white color for links */
+    color: #abeaf5; 
+    /* Keeps the underline for clarity that it's a link */
+    text-decoration: underline; 
+    
+    /* Adds a little space around the link */
+    margin: 0 5px; 
+}
+
+.footer-text a:hover {
+    /* Slight fade effect when you point at the link */
+    opacity: 0.8;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.input-row label { 
+    flex: 1; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+}
+
+.input-row input, 
+.input-row textarea { 
+    flex: 1.5; 
+    padding: 12px; 
+    border-radius: 20px; 
+    border: none; 
+    background: #f5e8de; 
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #c07336;
+    color: #ffffff;
+    border: none;
+    padding: 12px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-submit:hover{
+    opacity:0.9;
+}
+
+.btn-submit:active{
+    transform:scale(0.92);
+    box-shadow:0 0 8px rgba(0,0,0,0.3) inset;
+}
+
+
+/* =========================================
+   1. PAGE WRAPPER & TITLE
+   ========================================= */
+.details-wrapper {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.title-underline {
+    width: 400px;
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 0 auto 50px auto;
+}
+
+/* =========================================
+   2. MAIN CARD LAYOUT (Two Columns)
+   ========================================= */
+.details-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.info-column {
+    flex: 1.2;
+}
+
+.image-column {
+    flex: 1;
+}
+
+/* =========================================
+   3. DETAIL ROWS (Labels & Underlines)
+   ========================================= */
+.detail-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+.main-title {
+    margin-top: 0;
+    padding-top: 20px; /* small controlled spacing */
+}
+
+.label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    min-width: 180px;
+    color: #000000;
+}
+
+.category-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+}
+
+/* The specific underlines from the design */
+.value:not(.description-box) {
+    border-bottom: 2px solid #000000;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center; /* This pulls the label down and the box up to meet in the middle */
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* The unique rounded description box */
+.description-box {
+    background: #f5e8de;
+    border: 1px solid #000000;
+    border-radius: 20px; /* Matching the pill shape in your design */
+    width: 350px;
+    height: 45px;
+    display: flex; /* Helps align text inside the box if needed */
+    align-items: center;
+    padding: 0 15px;
+    margin: 0; /* Ensures no extra external spacing is fighting the flex alignment */
+}
+
+/* =========================================
+   4. IMAGE BOX
+   ========================================= */
+.image-display-box {
+  width: 300px;        /* adjust as per your UI */
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #d19a6a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.image-display-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* ⭐ IMPORTANT */
+  display: block;
+}
+
+.img-placeholder-text {
+  position: absolute;
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   5. MATCHES & ACTION BUTTONS
+   ========================================= */
+.bottom-actions {
+    margin-top: 20px;
+}
+
+.ai-matches {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.match-btn {
+    background-color: #c07336;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Large Teal Contact Button */
+.contact-btn {
+    background-color: #128a8a;
+    color: #ffffff;
+    width: 50%;
+    padding: 18px;
+    border-radius: 25px;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Large Red Resolved Button */
+.resolve-btn {
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.1;
+}
+
+.resolve-btn small {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+
+/* ===== ABOUT ===== */
+.about-section {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid #d19a6a66;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #d19a6a66;  /* same light line */
+    color: rgb(4, 0, 0);
+}  
+/* ===== CUSTOM ALERT BOX ===== */
+
+/* Dark overlay background */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Alert box */
+.alert-box {
+  background-color: #90623f;
+  width: 90%;
+  max-width: 450px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.header {
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 30px 5px;
+}
+
+/* Message */
+.message {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+/* OK Button */
+.ok-btn {
+  background-color: white;
+  color: #c9936b;
+  border: none;
+  padding: 8px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.ok-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+
