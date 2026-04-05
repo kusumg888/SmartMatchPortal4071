@@ -84,7 +84,6 @@ this.reset();
 });
 }
 
-
 // LOGIN
 const loginForm = document.getElementById("loginForm");
 
